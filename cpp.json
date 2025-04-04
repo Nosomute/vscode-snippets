@@ -1,22 +1,5 @@
-
 {
-    // Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
-    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-    // same ids are connected.
-    /*"cpp estructure": {
-        //"scope": "cpp",
-        "prefix": "cpp",
-        "body": [
-            "#include <iostream>\n$1",
-            "using namespace std;\n",
-            "int main()",
-            "{",
-            "\t$0\n",
-            "\treturn 0;\n}",
-        ],
-        //"description": "describir"
-        }*/
+    // cpp
     "cpp estructure": {
         //"scope": "cpp",
         "prefix": "cpp",

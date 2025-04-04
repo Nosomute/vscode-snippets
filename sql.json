@@ -1,11 +1,5 @@
 {
-    /*"SQL server": {
-        "prefix": "SQL server",
-        "body": [
-            "sql server",
-        ],
-        "description": "Simple SQL example"
-    },*/
+    // SQL
     "CREATE DATABASE": {
         "prefix": "CREATE DATABASE",
         "body": [
@@ -28,7 +22,7 @@
         ],
     },
     "SELECT * FROM": {
-        "prefix": "SELECT * FROM",
+        "prefix": "viewAllTable",
         "body": [
             "SELECT * FROM ${0:TableName};",
         ],
@@ -54,28 +48,10 @@
             "WHERE ${0:/*conditions*/}"
         ],
     },
-    "JOIN": {
-        "prefix": "JOIN",
-        "body": [
-            "JOIN ${1:OtherTable} ON ${1:OtherTable}.${2:Fk} = ${3:OtherTable}.${0:Pk}",
-        ],
-    },
     "INNER JOIN": {
         "prefix": "INNER JOIN",
         "body": [
-            "INNER JOIN ${1:OtherTable} ON ${1:OtherTable}.${2:Fk} = ${3:OtherTable}.${0:Pk}",
-        ],
-    },
-    "LEFT JOIN": {
-        "prefix": "LEFT JOIN",
-        "body": [
-            "LEFT JOIN ${1:OtherTable} ON ${1:OtherTable}.${2:Fk} = ${3:OtherTable}.${0:Pk}",
-        ],
-    },
-    "RIGHT JOIN": {
-        "prefix": "RIGHT JOIN",
-        "body": [
-            "RIGHT JOIN ${1:OtherTable} ON ${1:OtherTable}.${2:Fk} = ${3:OtherTable}.${0:Pk}",
+            "INNER JOIN ${1:OtherTable} ON ${1:OtherTable}.${2:Fk} = ${3:Table}.${0:Pk}",
         ],
     },
     "AS": {
@@ -308,34 +284,6 @@
         "prefix": "AVG",
         "body": [
             "AVG(${0:})"
-        ],
-    },
-    "CREATE PROCEDURE": {
-        "prefix": "CREATE PROCEDURE",
-        "body": [
-            "CREATE PROCEDURE ${1:name} ($2)",
-            "AS",
-            "BEGIN",
-            "\t$0",
-            "END;"
-        ],
-    },
-    "BEGIN": {
-        "prefix": "BEGIN",
-        "body": [
-            "BEGIN",
-            "\t$0",
-            "END;"
-        ],
-    },
-    "CREATE FUNCTION": {
-        "prefix": "CREATE FUNCTION",
-        "body": [
-            "CREATE FUNCTION ${1:name} ($2) RETURNS $3",
-            "AS",
-            "BEGIN",
-            "\t$0",
-            "END;"
         ],
     },
     "snippets credits": {
