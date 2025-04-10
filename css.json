@@ -1,0 +1,75 @@
+{
+	// css
+	"css": {
+		"prefix": "css",
+		"body": [
+			"* {",
+			"\tmargin: 0;",
+			"\tpadding: 0;",
+			"\tbox-sizing: border-box;",
+			"\tfont-family: sans-serif;",
+			"}\n",
+			"html, body {",
+			"\theight: 100%;",
+			"}\n",
+			"$0",
+		],
+		"description": "define basic styles"
+	},
+	"border": {
+		"prefix": "border",
+		"body": [
+			"border: ${1:1px} solid ${2:black}$0;"
+		],
+	},
+	"outline": {
+		"prefix": "outline",
+		"body": [
+			"outline: ${1:1px} solid ${2:black}$0;"
+		],
+	},
+	"@media  (min-width)": {
+		"prefix": "media screen min width",
+		"body": [
+			"@media (min-width: ${1:960px}) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"@media (max-width)": {
+		"prefix": "media max width",
+		"body": [
+			"@media (max-width: ${1:960px}) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"@media (min-height)": {
+		"prefix": "media min height",
+		"body": [
+			"@media (min-height: ${1:600px}) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"@media (max-height)": {
+		"prefix": "media max height",
+		"body": [
+			"@media (max-height: ${1:600px}) {",
+			"\t$0",
+			"}"
+		],
+	},
+	"snippets credits": {
+		"prefix": "snippets credits",
+		"body": [
+			"/*",
+			"/* Snippets HTML [Version 1.1.0]",
+			"Last update 15-10-2024 */",
+			"By Anthony Vasquez [Thony764]",
+			"Todos los derechos reservados",
+			"Copyright @2024",
+			"/*",
+		]
+	},
+}

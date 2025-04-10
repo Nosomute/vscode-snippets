@@ -1,0 +1,186 @@
+{
+    // java
+    "Scanner": {
+        "prefix": "Scanner entrada = new Scanner(System.in);",
+        "body": [
+            "Scanner entrada = new Scanner(System.in);",
+            "$0",
+        ],
+    },
+    "void main(String[] args)": {
+        "prefix": "public static void main(String[] args)",
+        "body": [
+            "public static void main(String[] args){",
+            "\t$0",
+            "}",
+        ],
+    },
+    "java": {
+        "prefix": "java",
+        "body": [
+            //"package ${TM_DIRECTORY/.*\\\\(.*)/$1/};",
+            "\nimport java.util.Scanner;\n",
+            "public class ${TM_FILENAME_BASE} {",
+            "\tpublic static void main(String[] args) {",
+            "\t\tScanner entrada = new Scanner(System.in);\n",
+            "\t\t$0",
+            "\n\t\tentrada.close();",
+            "\t}",
+            "}",
+        ],
+    },
+    "java package": {
+        "prefix": "java package",
+        "body": [
+            "package ${TM_DIRECTORY/.*\\\\(.*)/$1/};",
+            "\nimport java.util.Scanner;\n",
+            "public class ${TM_FILENAME_BASE} {",
+            "\tpublic static void main(String[] args) {",
+            "\t\tScanner entrada = new Scanner(System.in);\n",
+            "\t\t$0",
+            "\n\t\tentrada.close();",
+            "\t}",
+            "}",
+        ],
+    },
+    "package": {
+        "prefix": "package",
+        "body": [
+            "package ${TM_DIRECTORY/.*\\\\(.*)/$1/};",
+        ],
+    },
+    "System.out.println()": {
+        "prefix": "ss",
+        "body": [
+            "System.out.println(${1:\"$0\"});",
+        ],
+    },
+    "entrada": {
+        "prefix": "entrada",
+        "body": [
+            "entrada",
+        ],
+    },
+    "entrada.nextFloat()": {
+        "prefix": "entrada.nextFloat()",
+        "body": [
+            "entrada.nextFloat();\n",
+        ],
+    },
+    "entrada.nextInt()": {
+        "prefix": "entrada.nextInt()",
+        "body": [
+            "entrada.nextInt();\n",
+        ],
+    },
+    "entrada.nextLine()": {
+        "prefix": "entrada.nextLine()",
+        "body": [
+            "entrada.nextLine();\n",
+        ],
+    },
+    "else": {
+        "prefix": "else",
+        "body": [
+            " else {",
+            "\t$0",
+            "}",
+        ],
+    },
+    "public class": {
+        "prefix": "public class",
+        "body": [
+            "public class ${1:name} {",
+            "\t$0",
+            "}",
+        ],
+    },
+    "public void": {
+        "prefix": "public void",
+        "body": [
+            "public void ${1:name} ($2) {",
+            "\t$0",
+            "}",
+        ],
+    },
+    "void": {
+        "prefix": "void",
+        "body": [
+            "void ${1:name} ($2) {",
+            "\t$0",
+            "}",
+        ],
+    },
+    "public int": {
+        "prefix": "public int",
+        "body": [
+            "public int ${1:name} ($2) {",
+            "\t$0\n",
+            "\treturn /*value*/",
+            "}",
+        ],
+    },
+    "public float": {
+        "prefix": "public float",
+        "body": [
+            "public float ${1:name} ($2) {",
+            "\t$0\n",
+            "\treturn /*value*/",
+            "}",
+        ],
+    },
+    "public String": {
+        "prefix": "public String",
+        "body": [
+            "public String ${1:name} ($2) {",
+            "\t$0\n",
+            "\treturn /*value*/",
+            "}",
+        ],
+    },
+    "constructor method": {
+        "prefix": [
+            "constructor method",
+            "public constructor",
+        ],
+        "body": [
+            "public ${TM_FILENAME_BASE}(${1:}){",
+            "\t$0",
+            "}",
+        ],
+    },
+    "JOptionPane.showInputDialog()": {
+        "prefix": [
+            "JOptionPane.showInputDialog()",
+            "JOPSID",
+            "JI",
+        ],
+        "body": [
+            "JOptionPane.showInputDialog(\"$0\")",
+        ],
+    },
+    "Create objet": {
+        "prefix": "objet",
+        "body": [
+            "${1:type} ${0:name} = new $1();",
+        ],
+    },
+    "this": {
+        "prefix": "this",
+        "body": [
+            "this${1/\\.(.*)/.$1 = $1;/}$0"
+        ]
+    },
+    "snippets credits": {
+        "prefix": "snippets credits",
+        "body": [
+            "/*",
+            "Snippets JAva [Version 1.1.0]",
+            "Last update 21-04-2024",
+            "By Anthony Vasquez [Thony764]",
+            "Todos los derechos reservados",
+            "Copyright @2022",
+            "/*",
+        ]
+    },
+}

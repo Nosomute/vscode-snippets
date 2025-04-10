@@ -1,0 +1,416 @@
+{
+	// python    
+	"Print to console": {
+		"prefix": [
+			"print",
+			"pri",
+			"pr"
+		],
+		"body": [
+			"print(${1:\"${0:}\"})",
+		],
+	},
+	"printf": {
+		"prefix": [
+			"printf",
+			"pf"
+		],
+		"body": [
+			"print(f\"$1 {$2}$0\")",
+		],
+	},
+	"f string": {
+		"prefix": [
+			"fstring",
+			"fs"
+		],
+		"body": [
+			"f\"$1 {$2}$0\"",
+		],
+	},
+	"input()": {
+		"prefix": [
+			"input()",
+			"inp"
+		],
+		"body": [
+			"input(${1:\"${0:}\"})",
+		],
+	},
+	"int()": {
+		"prefix": [
+			"int()",
+		],
+		"body": [
+			"int(${1:\"${0:}\"})",
+		],
+	},
+	"end=\"\"": {
+		"prefix": [
+			"end=\"\"",
+		],
+		"body": [
+			"end=\"${0:}\"",
+		],
+	},
+	"sep=\"\"": {
+		"prefix": [
+			"sep=\"\"",
+		],
+		"body": [
+			"sep=\"${0:}\"",
+		],
+	},
+	"elif": {
+		"prefix": [
+			"elif",
+		],
+		"body": [
+			"elif ${1:condition}:",
+			"\t${0:pass}",
+		],
+	},
+	"lower()": {
+		"prefix": [
+			"lower()",
+		],
+		"body": [
+			"lower()",
+		],
+	},
+	"upper()": {
+		"prefix": [
+			"upper()",
+		],
+		"body": [
+			"upper()",
+		],
+	},
+	"replace()": {
+		"prefix": ".replace()",
+		"body": [
+			".replace(\"${1:old}\", \"${0:new}\")"
+		],
+	},
+	"replaceCount()": {
+		"prefix": ".replaceCount()",
+		"body": [
+			".replace(\"${1:old}\", \"${2:new}\", ${0:count})"
+		],
+	},
+	"split()": {
+		"prefix": ".split()",
+		"body": [
+			".split(\"${0:value}\")"
+		],
+	},
+	"splitCount()": {
+		"prefix": ".splitCount()",
+		"body": [
+			".split(\"${1:value}\", ${0:count})"
+		],
+	},
+	"find()": {
+		"prefix": ".find()",
+		"body": [
+			".find(\"${0:value}\")"
+		],
+	},
+	"rfind()": {
+		"prefix": ".rfind()",
+		"body": [
+			".rfind(\"${0:value}\")"
+		],
+	},
+	"join()": {
+		"prefix": ".join()",
+		"body": [
+			".join(\"$0\")"
+		],
+	},
+	"type()": {
+		"prefix": [
+			"type()",
+		],
+		"body": [
+			"type(${1:data})",
+		],
+	},
+	"for in range": {
+		"prefix": [
+			"for in range",
+		],
+		"body": [
+			"for ${1:i} in range($2):",
+			"\t${3:pass}$0"
+		],
+	},
+	"array[]": {
+		"prefix": [
+			"array[]",
+			"arr[]"
+		],
+		"body": [
+			"${1:name} = [$0]",
+		],
+	},
+	"list[]": {
+		"prefix": [
+			"list []"
+		],
+		"body": [
+			"${1:name} = [$0]",
+		],
+	},
+	"dictionary{}": {
+		"prefix": [
+			"dictionary{}",
+			"dict {}",
+			"dicty{}"
+		],
+		"body": [
+			"${1:name} = {$0}",
+		],
+	},
+	"key": {
+		"prefix": [
+			"key",
+		],
+		"body": [
+			"${1:\"${2:key}\"}: $0",
+		],
+	},
+	"append()": {
+		"prefix": [
+			".append()",
+		],
+		"body": [
+			".append(${0:value})",
+		],
+	},
+	"insert()": {
+		"prefix": [
+			".insert()",
+		],
+		"body": [
+			".insert(${1:index},${0:value})",
+		],
+	},
+	"pop []": {
+		"prefix": [
+			".pop(index)",
+		],
+		"body": [
+			".pop(${0:index})",
+		],
+	},
+	"pop {}": {
+		"prefix": [
+			".pop(key)",
+		],
+		"body": [
+			".pop(${0:key})",
+		],
+	},
+	"remove()": {
+		"prefix": [
+			".remove()",
+		],
+		"body": [
+			".remove(${0:value})",
+		],
+	},
+	"reverse()": {
+		"prefix": [
+			".reverse()",
+		],
+		"body": [
+			".reverse()",
+		],
+	},
+	"sort()": {
+		"prefix": [
+			".sort()",
+		],
+		"body": [
+			".sort()",
+		],
+	},
+	"items()": {
+		"prefix": [
+			".items()",
+		],
+		"body": [
+			".items()",
+		],
+	},
+	"keys()": {
+		"prefix": [
+			".keys()",
+		],
+		"body": [
+			".keys()",
+		],
+	},
+	"values()": {
+		"prefix": [
+			".values()",
+		],
+		"body": [
+			".values()",
+		],
+	},
+	"clear()": {
+		"prefix": [
+			".clear()",
+		],
+		"body": [
+			".clear()",
+		],
+	},
+	"copy()": {
+		"prefix": [
+			".copy()",
+		],
+		"body": [
+			".copy()",
+		],
+	},
+	"index()": {
+		"prefix": [
+			".index()",
+		],
+		"body": [
+			".index(${1:value})",
+		],
+	},
+	"extend()": {
+		"prefix": [
+			".extend()",
+		],
+		"body": [
+			".extend(${1:arr})",
+		],
+	},
+	"indexRange()": {
+		"prefix": [
+			".indexRange()",
+		],
+		"body": [
+			".index(${1:value},${2:start},${0:end})",
+		],
+	},
+	"len()": {
+		"prefix": [
+			"len()",
+		],
+		"body": [
+			"len(${0:value})",
+		],
+	},
+	"count()": {
+		"prefix": [
+			".count()",
+		],
+		"body": [
+			".count(${0:value})",
+		],
+	},
+	"countRange()": {
+		"prefix": [
+			".countRange()",
+		],
+		"body": [
+			".count(${1:value}, ${2:start}, ${0:end})",
+		],
+	},
+	".fromkeys()": {
+		"prefix": [
+			".fromkeys()",
+		],
+		"body": [
+			".fromkeys(${1:sequence}, ${0:value})",
+		],
+	},
+	".get()": {
+		"prefix": [
+			".get()",
+		],
+		"body": [
+			".get(${0:key})",
+		],
+	},
+	".popitem()": {
+		"prefix": [
+			".popitem()",
+		],
+		"body": [
+			".popitem()",
+		],
+	},
+	"\"\"\"": {
+		"prefix": [
+			"\"\"\"",
+		],
+		"body": [
+			"\"\"\"\n$0\n\"\"",
+		],
+	},
+	"else": {
+		"prefix": [
+			"else",
+		],
+		"body": [
+			"else:",
+			"\t${0:pass}"
+		],
+	},
+	"def __init__": {
+		"prefix": [
+			"defi",
+			"def __init__"
+		],
+		"body": [
+			"def __init__(self, ${1:arg}):",
+			"\t${0:pass}"
+		],
+	},
+	"__init__": {
+		"prefix": [
+			"__init__"
+		],
+		"body": [
+			"__init__",
+		],
+	},
+	"class": {
+		"prefix": [
+			"class ",
+		],
+		"body": [
+			"class ${1:Name}:",
+			"\t$0"
+		],
+	},
+	"self": {
+		"prefix": [
+			"self",
+			"s"
+		],
+		"body": [
+			"self.$1 = $1;\n"
+		]
+	},
+	"snippets credits": {
+		"prefix": "snippets credits",
+		"body": [
+			"/*",
+			"/* Snippets HTML [Version 1.1.0]",
+			"Last update 27-02-2025 */",
+			"By Anthony Vasquez [Thony764]",
+			"Todos los derechos reservados",
+			"Copyright @2025",
+			"/*",
+		]
+	},
+}

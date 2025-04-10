@@ -1,0 +1,301 @@
+{
+    // SQL
+    "CREATE DATABASE": {
+        "prefix": "CREATE DATABASE",
+        "body": [
+            "CREATE DATABASE ${0:DBname};",
+        ],
+    },
+    "USE DATA BASE": {
+        "prefix": "USE DATA BASE",
+        "body": [
+            "USE ${0:DBname};",
+        ],
+    },
+    "CREATE TABLE": {
+        "prefix": "CREATE TABLE",
+        "body": [
+            "CREATE TABLE ${1:TableName}",
+            "(",
+            "    $0",
+            ");",
+        ],
+    },
+    "SELECT * FROM": {
+        "prefix": "viewAllTable",
+        "body": [
+            "SELECT * FROM ${0:TableName};",
+        ],
+    },
+    "SELECT FROM": {
+        "prefix": "SELECT FROM",
+        "body": [
+            "SELECT ${2:*}",
+            "FROM ${1:TableName}$0",
+        ],
+    },
+    "select from where": {
+        "prefix": "SELECT FROM WHERE",
+        "body": [
+            "SELECT ${1:*}",
+            "FROM ${2:TableName}",
+            "WHERE ${0:/*conditions*/}"
+        ],
+    },
+    "WHERE": {
+        "prefix": "WHERE",
+        "body": [
+            "WHERE ${0:/*conditions*/}"
+        ],
+    },
+    "INNER JOIN": {
+        "prefix": "INNER JOIN",
+        "body": [
+            "INNER JOIN ${1:OtherTable} ON ${1:OtherTable}.${2:Fk} = ${3:Table}.${0:Pk}",
+        ],
+    },
+    "AS": {
+        "prefix": "AS",
+        "body": [
+            "AS '${0:}'",
+        ],
+    },
+    "DROP TABLE": {
+        "prefix": "DROP TABLE",
+        "body": [
+            "DROP TABLE ${0:TableName};",
+        ],
+    },
+    "DROP DATA BASE": {
+        "prefix": "DROP DATA BASE",
+        "body": [
+            "DROP TABLE ${0:DBname};",
+        ],
+    },
+    "INSERT INTO": {
+        "prefix": "INSERT INTO",
+        "body": [
+            "INSERT INTO ${1:TableName}",
+            "VALUES",
+            "\t($0);",
+        ],
+    },
+    "INT": {
+        "prefix": "INT ",
+        "body": [
+            "INT,",
+            "$0",
+        ],
+    },
+    "FLOAT": {
+        "prefix": "FLOAT ",
+        "body": [
+            "FLOAT,",
+            "$0",
+        ],
+    },
+    "VARCHAR": {
+        "prefix": "VARCHAR ",
+        "body": [
+            "VARCHAR(${1:}),",
+            "$0",
+        ],
+    },
+    "DATETIME": {
+        "prefix": "DATETIME ",
+        "body": [
+            "DATETIME,",
+            "$0",
+        ],
+    },
+    "BIGINT": {
+        "prefix": "BIGINT ",
+        "body": [
+            "BIGINT,",
+            "$0",
+        ],
+    },
+    "CONSTRAINT PRIMARY KEY": {
+        "prefix": "CONSTRAINT PRIMARY KEY",
+        "body": [
+            "CONSTRAINT pk_$1 PRIMARY KEY($2),",
+            "$0",
+        ],
+    },
+    "CONSTRAINT FOREIGN KEY": {
+        "prefix": "CONSTRAINT FOREIGN KEY",
+        "body": [
+            "CONSTRAINT fk_$1 FOREIGN KEY($2) REFERENCES ${3:TableName} ($4),",
+            "$0",
+        ],
+    },
+    "PRIMARY KEY": {
+        "prefix": "PRIMARY KEY",
+        "body": [
+            "PRIMARY KEY,",
+            "$0",
+        ],
+    },
+    "IDENTITY": {
+        "prefix": "IDENTITY(1,1) PRIMARY KEY",
+        "body": [
+            "IDENTITY(1,1) PRIMARY KEY,",
+            "$0",
+        ],
+    },
+    "FOREIGN KEY": {
+        "prefix": "FOREIGN KEY",
+        "body": [
+            "FOREIGN KEY (${1:ColumnName}) REFERENCES ${2:TableName} (${3:ColumnName}),",
+            "$0",
+        ],
+    },
+    "NOT NULL": {
+        "prefix": "NOT NULL ",
+        "body": [
+            "NOT NULL,",
+            "$0",
+        ],
+    },
+    "NULL": {
+        "prefix": "NULL ",
+        "body": [
+            "NULL,",
+            "$0",
+        ],
+    },
+    "DELETE TABLE": {
+        "prefix": "DELETE FROM TABLE",
+        "body": [
+            "DELETE FROM ${0:TableName};",
+        ],
+    },
+    "DELETE ROW WHERE": {
+        "prefix": "DELETE FROM TABLE WHERE",
+        "body": [
+            "DELETE FROM ${1:TableName}",
+            "WHERE ${0:/*Conditions*/}",
+        ],
+    },
+    "UPDATE TABLE": {
+        "prefix": "UPDATE TABLE",
+        "body": [
+            "UPDATE ${1:TableName}",
+            "SET",
+            "\t${2:ColumnName} = ${3:'${4:}'},",
+            "\t$5",
+            "WHERE ${0:/*Conditions*/}",
+        ],
+    },
+    "COLUMN NEW VALUE": {
+        "prefix": "FIELD",
+        "body": [
+            "${1:ColumnName} = ${2:'${3:}'},",
+            "$0",
+        ],
+    },
+    "ALTER TABLE ADD COLUMN": {
+        "prefix": "ALTER TABLE ADD COLUMN",
+        "body": [
+            "ALTER TABLE ${1:TableName}",
+            "ADD ${2:MewColumn}  ${0:DataType}"
+        ],
+    },
+    "ALTER TABLE DROP COLUMN": {
+        "prefix": "ALTER TABLE DROP COLUMN",
+        "body": [
+            "ALTER TABLE ${1:TableName}",
+            "DROP COLUMN ${0:ColumnName}"
+        ],
+    },
+    "ALTER TABLE RENAME": {
+        "prefix": "ALTER TABLE RENAME",
+        "body": [
+            "ALTER TABLE ${1:TableName} RENAME TO ${0:NewTableName}"
+        ],
+    },
+    "ALTER TABLE RENAME COLUMN": {
+        "prefix": "ALTER TABLE RENAME COLUMN",
+        "body": [
+            "ALTER TABLE ${1:TableName} RENAME COLUMN ${2:ColumnName} TO ${0:NewColumnName}"
+        ],
+    },
+    "TOP": {
+        "prefix": "TOP",
+        "body": [
+            "TOP ${0:/*number of rows*/}"
+        ],
+    },
+    "LIKE": {
+        "prefix": "LIKE",
+        "body": [
+            "LIKE '${0:}'"
+        ],
+    },
+    "ORDER BY ASCENDENTE": {
+        "prefix": "ORDER BY ASC",
+        "body": [
+            "ORDER BY ${0:Column} ASC"
+        ],
+    },
+    "ORDER BY DESCENDENTE": {
+        "prefix": "ORDER BY DESC",
+        "body": [
+            "ORDER BY ${0:Column} DESC"
+        ],
+    },
+    "GROUP BY": {
+        "prefix": "GROUP BY",
+        "body": [
+            "GROUP BY ${0:Column}"
+        ],
+    },
+    "HAVING": {
+        "prefix": "HAVING",
+        "body": [
+            "HAVING ${0:/*aggregate functions*/}"
+        ],
+    },
+    "MIN": {
+        "prefix": "MIN",
+        "body": [
+            "MIN(${0:})"
+        ],
+    },
+    "MAX": {
+        "prefix": "MAX",
+        "body": [
+            "MAX(${0:})"
+        ],
+    },
+    "COUNT()": {
+        "prefix": "COUNT",
+        "body": [
+            "COUNT(${0:*})"
+        ],
+    },
+    "SUM()": {
+        "prefix": "SUM",
+        "body": [
+            "SUM(${0:})"
+        ],
+    },
+    "AVG()": {
+        "prefix": "AVG",
+        "body": [
+            "AVG(${0:})"
+        ],
+    },
+    "snippets credits": {
+        "prefix": "snippets credits",
+        "body": [
+            "/*",
+            "Snippets sql server [Version 1.2.0]",
+            "Last update 21-03-2024",
+            "By Anthony Vasquez [Thony764]",
+            "Todos los derechos reservados",
+            "Copyright @2023",
+            "*/",
+        ]
+    },
+}

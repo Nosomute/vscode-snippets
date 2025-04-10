@@ -1,0 +1,244 @@
+{
+	// html
+	"html-all": {
+		"prefix": "html-all",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"",
+			"<head>",
+			"    <meta charset=\"UTF-8\">",
+			"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"    <title>${1:Document}</title>",
+			"    <link rel=\"stylesheet\" href=\"style.css\">",
+			"    <script src=\"https://code.jquery.com/jquery-3.6.4.min.js\"></script>",
+			"    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css\"",
+			"        integrity=\"sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==\"",
+			"        crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />",
+			"</head>",
+			"",
+			"<body>\n",
+			"    ${0}\n",
+			"    <script src=\"main.js\"></script>",
+			"    <script src=\"jquery.js\"></script>\n",
+			"</body>",
+			"",
+			"</html>"
+		],
+		"description": "Basic HTML5 template with CSS and Font Awesome links"
+	},
+	"html": {
+		"prefix": "html",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"",
+			"<head>",
+			"    <meta charset=\"UTF-8\">",
+			"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"    <title>${1:Document}</title>",
+			"    <link rel=\"stylesheet\" href=\"style.css\">",
+			"</head>",
+			"",
+			"<body>\n",
+			"    ${0}\n",
+			"</body>",
+			"",
+			"</html>"
+		],
+		"description": "Basic HTML5 template with CSS and Font Awesome links"
+	},
+	"font-awesome": {
+		"prefix": "font-awesome",
+		"body": [
+			"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css\"",
+			"      integrity=\"sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==\"",
+			"      crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />"
+		]
+	},
+	"script js": {
+		"prefix": "script js",
+		"body": [
+			"<script src=\"main.js\"></script>\n",
+		]
+	},
+	//conteiners
+	"div": {
+		"prefix": "div",
+		"body": [
+			"<div $1>$0</div>"
+		],
+	},
+	"section": {
+		"prefix": "section",
+		"body": [
+			"<section $1>$0</section>"
+		],
+	},
+	"article": {
+		"prefix": "article",
+		"body": [
+			"<article $1>$0</article>"
+		],
+	},
+	"class": {
+		"prefix": "class",
+		"body": [
+			"class=\"$0\""
+		],
+	},
+	"header": {
+		"prefix": "header",
+		"body": [
+			"<header $1>$0</header>"
+		],
+	},
+	"nav": {
+		"prefix": "nav",
+		"body": [
+			"<nav $1>$0</nav>"
+		],
+	},
+	"aside": {
+		"prefix": "aside",
+		"body": [
+			"<aside $1>$0</aside>"
+		],
+	},
+	"main": {
+		"prefix": "main",
+		"body": [
+			"<main $1>$0</main>"
+		],
+	},
+	"footer": {
+		"prefix": "footer",
+		"body": [
+			"<footer $1>$0</footer>"
+		],
+	},
+	"script": {
+		"prefix": "script",
+		"body": [
+			"<script $1>$0</script>"
+		],
+	},
+	// container-class
+	"div-class": {
+		"prefix": "div-class",
+		"body": [
+			"<div class=\"$1\">$0</div>"
+		],
+		"description": "Crea un div con clase"
+	},
+	"section-class": {
+		"prefix": "section-class",
+		"body": [
+			"<section class=\"$1\">$0</section>"
+		],
+		"description": "Crea una sección con clase"
+	},
+	"article-class": {
+		"prefix": "article-class",
+		"body": [
+			"<article class=\"$1\">$0</article>"
+		],
+		"description": "Crea un artículo con clase"
+	},
+	"header-class": {
+		"prefix": "header-class",
+		"body": [
+			"<header class=\"$1\">$0</header>"
+		],
+		"description": "Crea un encabezado con clase"
+	},
+	"nav-class": {
+		"prefix": "nav-class",
+		"body": [
+			"<nav class=\"$1\">$0</nav>"
+		],
+		"description": "Crea un nav con clase"
+	},
+	"aside-class": {
+		"prefix": "aside-class",
+		"body": [
+			"<aside class=\"$1\">$0</aside>"
+		],
+		"description": "Crea un aside con clase"
+	},
+	"main-class": {
+		"prefix": "main-class",
+		"body": [
+			"<main class=\"$1\">$0</main>"
+		],
+		"description": "Crea un main con clase"
+	},
+	"footer-class": {
+		"prefix": "footer-class",
+		"body": [
+			"<footer class=\"$1\">$0</footer>"
+		],
+		"description": "Crea un footer con clase"
+	},
+	"script-class": {
+		"prefix": "script-class",
+		"body": [
+			"<script class=\"$1\">$0</script>"
+		],
+		"description": "Crea un script con clase"
+	},
+	//Words
+	"container": {
+		"prefix": "container",
+		"body": [
+			"container"
+		],
+	},
+	"content": {
+		"prefix": "content",
+		"body": [
+			"content"
+		],
+	},
+	"card": {
+		"prefix": "card",
+		"body": [
+			"card"
+		]
+	},
+	"element": {
+		"prefix": "element",
+		"body": [
+			"element"
+		],
+	},
+	"item": {
+		"prefix": "item",
+		"body": [
+			"item"
+		],
+	},
+	/*
+    Emmet 
+    $ .- autoincrement 
+    * .- repeat
+    
+    div.class$*6{Contenido $}
+    div.nameClase*6{Contenido $}
+    div.nameClase$*6{Contenido $}
+    div.nameClase.secondNameClass*6{Contenido $}
+    div.nameClase.secondNameClass$*6{Contenido $}
+    */
+	"snippets credits": {
+		"prefix": "snippets credits",
+		"body": [
+			"/*",
+			"/* Snippets HTML [Version 1.1.0]",
+			"Last update 03-12-2024 */",
+			"By Anthony Vasquez [Thony764]",
+			"Todos los derechos reservados",
+			"Copyright @2024",
+			"/*",
+		]
+	},
+}
